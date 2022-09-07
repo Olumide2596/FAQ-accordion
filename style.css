@@ -119,7 +119,9 @@ h1 {
 	top: -40%;
 	transition: left ease 1s;
 }
-
+.img {
+	transition: transform 500ms ease-in-out;
+}
 .question-box {
 	border-bottom: 1px solid var(--col-dividers);
 	padding: 10px 0;
