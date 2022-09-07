@@ -165,13 +165,10 @@ h1 {
 	.mobile {
 		display: none;
 	}
-	body {
-	}
 
 	.container {
 		display: flex;
 		width: 80%;
-		margin-top: 0%;
 		max-width: 60rem;
 		padding: 40px 40px 60px 0;
 		align-items: center;
