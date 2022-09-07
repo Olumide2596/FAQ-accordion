@@ -5,7 +5,7 @@ const answers = document.querySelectorAll('.answer');
 const subImage = document.querySelector('.sub-image');
 
 questions.forEach(qtn => {
-	const reset = function () {
+	const reset = function (qtn) {
 		qtn.nextElementSibling.classList.add('hidden');
 
 		qtn.firstElementChild.classList.remove('bold');
@@ -16,16 +16,14 @@ questions.forEach(qtn => {
 
 	qtn.addEventListener('click', function () {
 		if (qtn.nextElementSibling.classList.contains('hidden')) {
+			questions.forEach(q => reset(q));
 			qtn.nextElementSibling.classList.remove('hidden');
 			qtn.firstElementChild.classList.add('bold');
 			qtn.querySelector('.img').style.transform = 'rotate(180deg)';
 			if (window.innerWidth < 600) subImage.style.left = '10%';
 			else subImage.style.left = '-35%';
 		} else {
-			reset();
+			reset(qtn);
 		}
 	});
 });
-
-console.log(window.innerWidth);
-console.log(answers);
