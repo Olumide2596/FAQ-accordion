@@ -66,10 +66,12 @@ body {
 	width: 100%;
 	font-family: var(--ff);
 	font-size: var(--fs-400);
-	background-image: linear-gradient(
+	background: linear-gradient(
+		to bottom,
 		var(--bg-gradient-1),
 		var(--bg-gradient-2)
 	);
+	background-repeat: no-repeat;
 }
 
 .container {
@@ -109,6 +111,7 @@ h1 {
 	width: 30%;
 	left: 10%;
 	top: -40%;
+	transition: left ease 1s;
 }
 
 .question-box {
@@ -149,7 +152,7 @@ h1 {
 	color: var(--col-neutral-2);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
 	.desktop {
 		display: block;
 	}
@@ -177,10 +180,11 @@ h1 {
 	}
 	.illustration {
 		background-image: url(images/bg-pattern-desktop.svg);
-		background-position: left bottom;
-		background-size: contain;
+		background-position: bottom left;
+		align-self: stretch;
+		background-size: 100%;
 		background-repeat: no-repeat;
-		height: 100%;
+		margin-top: 50px;
 	}
 	.desktop-image {
 		overflow: hidden;
@@ -190,7 +194,7 @@ h1 {
 	}
 	.sub-image {
 		width: 50%;
-		top: 35%;
+		top: 30%;
 		left: -25%;
 		z-index: 100;
 	}
